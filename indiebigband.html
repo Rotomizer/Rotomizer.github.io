@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PortfolioWebsite_Ex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <title>Andrew Clarke | The Indie Game Big Band</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links-scroll" id="navLinks">
+                <ul class="duration">
+                    <li id="navli"><a href="index.html">Home</a></li>
+                    <li id="navli"><a href="about.html">About</a></li>
+                    <li class="dropdown" id="navli">
+                        <a href="#" onclick="return false" class="active">Portfolio</a>
+                        <div class="nav-dropdown-2">
+                            <a href="indiebigband.html" class="active">Indie Game Big Band</a><br></br>
+                            <a href="recording.html">Recording Projects</a><br></br>
+                            <a href="compositions.html">Compositions</a><br></br>
+                        </div>
+                    </li>
+                    <li id="navli"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>        
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul id="navbar">
+                    <li id="navli"><a href="index.html">Home</a></li>
+                    <li id="navli"><a href="about.html">About</a></li>
+                    <li class="dropdown" id="navli">
+                        <a href="#" onclick="return false" class="active">Portfolio</a>
+                        <div class="nav-dropdown">
+                            <a href="indiebigband.html" class="active">Indie Game Big Band</a><br></br>
+                            <a href="recording.html">Recording Projects</a><br></br>
+                            <a href="compositions.html">Compositions</a><br></br>
+                        </div>
+                    </li>
+                    <li id="navli"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="header-text">
+            <h1>The Indie Game<br>Big Band - Live!</h1>
+        </div>
+    </section>
+
+    <section class="igbb">
+        <div class="header-container">
+            <h2>Watch the Full Concert Below!</h2>
+        </div>
+
+        <div class="video-container">
+            <iframe class="video" src="https://www.youtube.com/embed/6qz_U7jsUxg?si=pzE20lOKqGKXQ1Ys" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="indie-grid">
+            <div class="box1-i">
+                <h2>About This Performance...</h2>
+            </div>
+            <div class="box2-i">
+                <h2>Program</h2>
+            </div>
+            <div class="box2-i-alt">
+                <a href="https://drive.google.com/file/d/1_b-qBUXyKqXjsG9mv37Cpi6qx0krPhaP/preview" target="_blank"><h2 class="button">Click Here for Program</h2></a>
+            </div>
+            <div class="box3-i">
+                <p>This performance took place on December 7th, 2023 in the University Theatre at The University of Texas at Dallas. Over the course of four months, I arranged nine collections of various indie video game songs, directed a 31-piece jazz big band orchestra, and organized all the communication and planning that went into this show.<br></br>
+                I demostrated determination, leadership, and passion fully in this performance. However, this concert would not have been possible without the efforts of all the people involved. My sincerest thanks goes out to everyone involved, and I hope we can work together again someday. All people directly involved can be found on <strong>pg. 2</strong> of the Program. Photos by Evan Acuna.</p>
+            </div>
+            <div class="box4-i">
+                <embed src="https://drive.google.com/file/d/1_b-qBUXyKqXjsG9mv37Cpi6qx0krPhaP/preview" width="" height="" allow="autoplay"></embed>
+            </div>
+            <div class="box5-i">
+                <div class="current-image">
+                    <img src="Images/IGBB_01.jpeg" class="image1" style="z-index: 1;">
+                    <img src="Images/IGBB_02.jpg" class="image2">
+                    <img src="Images/IGBB_03.jpg" class="image3">
+                    <img src="Images/IGBB_04.jpg" class="image4">
+                    <img src="Images/IGBB_05.jpeg" class="image5">
+                    <img src="Images/IGBB_06.jpg" class="image6">
+                    <img src="Images/IGBB_07.jpg" class="image7">
+                    <img src="Images/IGBB_08.jpg" class="image8">
+                    <img src="Images/IGBB_09.jpg" class="image9">
+                    <img src="Images/IGBB_10.jpg" class="image10">
+                </div>
+            </div>
+            <div class="box6-i">
+                <div class="image-scroller">
+                    <div class="image-element image1" onclick="changeImageSrc(0)"></div>
+                    <div class="image-element image2" onclick="changeImageSrc(1)"></div>
+                    <div class="image-element image3" onclick="changeImageSrc(2)"></div>
+                    <div class="image-element image4" onclick="changeImageSrc(3)"></div>
+                    <div class="image-element image5" onclick="changeImageSrc(4)"></div>
+                    <div class="image-element image6" onclick="changeImageSrc(5)"></div>
+                    <div class="image-element image7" onclick="changeImageSrc(6)"></div>
+                    <div class="image-element image8" onclick="changeImageSrc(7)"></div>
+                    <div class="image-element image9" onclick="changeImageSrc(8)"></div>
+                    <div class="image-element image10" onclick="changeImageSrc(9)"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------- Footer ------->
+    <section class="socials">
+        <h2>Follow me on social media!</h2>
+        <div class="icons">
+            <a href="https://open.spotify.com/artist/2XmL0clpaXzitvodmnr4ls" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+            <a href="https://music.apple.com/us/artist/rotomizer/1525783176" target="_blank"><i class="fab fa-itunes-note fa-lg"></i></a>
+            <a href="https://www.instagram.com/rotomizer_official/?hl=en" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.youtube.com/channel/UCv8-IIwB5GYW065k-xJbzjA" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="https://www.linkedin.com/in/andrewjclarke24/" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+        </div>
+    </section>
+   
+    <footer>
+        <div class="footer-part">
+            <p>&copy; 2024 Andrew Clarke. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!------Javascript for Toggle Menu ----->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        var imageGroup = document.querySelectorAll(".image-element");
+        var currentImage = document.querySelectorAll(".current-image > img");
+        var indexNum = 1;
+        var imageFlag = false;
+
+        imageGroup[0].classList.add('active-image');
+        window.onscroll = function() {stickyNavBar()}
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        function stickyNavBar() {
+            if (window.scrollY >= sticky) {
+                navLinks.classList.add('nav-links-show');
+                navLinks.classList.remove('nav-links-hide');
+            } else {
+                navLinks.classList.add('nav-links-hide');
+                navLinks.classList.remove('nav-links-show');
+            }
+        }
+
+        function changeImageSrc(newSrc) {
+            for (let i = 0; i < currentImage.length; i++) {
+                imageGroup[i].classList.remove('active-image');
+                if (currentImage[i].className = imageGroup[newSrc].className) {
+                    // check if user clicks on first image and if it's the first time
+                    if (newSrc == 0 && !imageFlag) {
+                        currentImage[i].classList.add('active-image');
+                        break;
+                    } else if (newSrc > 0) {
+                        showImage(newSrc);
+                        imageGroup[newSrc].classList.add('active-image');
+                        indexNum += 1;
+                        imageFlag = true;
+                    }
+                    // keeps system running normally after first time; can click first image
+                    showImage(newSrc);
+                    imageGroup[newSrc].classList.add('active-image');
+                    indexNum += 1;
+                } else {
+                    hideImage(i);
+                }
+            }
+        }
+
+        function showImage(num) {
+            if (currentImage[num].className = 'hide-image') {
+                currentImage[num].classList.remove('hide-image');
+                currentImage[num].classList.add('show-image');
+                currentImage[num].style.zIndex = indexNum;
+                navLinks.style.zIndex = indexNum + 1;
+            } else {
+                return;
+            }
+        }
+
+        function hideImage(num) {
+            if (currentImage[num].className = 'show-image') {
+                currentImage[num].classList.remove('show-image');
+                currentImage[num].classList.add('hide-image');
+                currentImage[num].style.zIndex = indexNum - 1;
+            } else {
+                return;
+            }
+        }
+    </script>
+</body>
+</html>
