@@ -13,7 +13,7 @@
 <body>
     <section class="header">
         <nav>
-            <div class="nav-links-scroll" id="navLinks">
+            <div class="nav-links-scroll" id="navScroll">
                 <ul class="duration">
                     <li id="navli"><a href="index.html">Home</a></li>
                     <li id="navli"><a href="about.html">About</a></li>
@@ -31,7 +31,6 @@
         </nav>        
         <nav>
             <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul id="navbar">
                     <li id="navli"><a href="index.html">Home</a></li>
                     <li id="navli"><a href="about.html">About</a></li>
@@ -46,7 +45,21 @@
                     <li id="navli"><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <nav>
+            <div class="nav-links-mobile" id="navMobile">
+                <i class="fa fa-times" onclick="toggleMenu(1)"></i>
+                <ul>
+                    <li id="navli"><a href="index.html">Home</a></li>
+                    <li id="navli"><a href="about.html">About</a></li>
+                    <li id="navli"><a href="#" onclick="expandPortfolio()">Portfolio</a></li>
+                    <li class="ex"><a href="indiebigband.html">Indie Game Big Band</a></li>
+                    <li class="ex"><a href="recording.html">Recording Projects</a></li>
+                    <li class="ex"><a href="compositions.html">Compositions</a></li>
+                    <li id="navli"><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="toggleMenu(0)"></i>
         </nav>
 
         <div class="header-text">
@@ -99,12 +112,12 @@
             </div>
             <div class="box3-c">
                 <h3>Send me an email!</h3>
-                <form action="form-handle.php" method="post">
+                <form action="https://formspree.io/f/mleqjoln" method="POST">
                     <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <input type="text" name="subject" placeholder="Subject Line" required>
                     <textarea rows="8" name="message" placeholder="Message" required></textarea>
-                    <button type="submit" class="button">Send Message</button>
+                    <button type="submit" class="button">Send</button>
                 </form>
             </div>
             <div class="box4-c">
@@ -138,30 +151,54 @@
     <script>
         window.onscroll = function() {stickyNavBar()}
 
-        var navLinks = document.getElementById("navLinks");
+        var navScroll = document.getElementById("navScroll");
+        var navMobile = document.getElementById("navMobile");
 
         var navbar = document.getElementById("navbar");
 
         var sticky = navbar.offsetTop;
 
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
-
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
-
         function stickyNavBar() {
             if (window.scrollY >= sticky) {
-                navLinks.classList.add('nav-links-show');
-                navLinks.classList.remove('nav-links-hide');
+                navScroll.classList.add('nav-links-show');
+                navScroll.classList.remove('nav-links-hide');
             } else {
-                navLinks.classList.add('nav-links-hide');
-                navLinks.classList.remove('nav-links-show');
+                navScroll.classList.add('nav-links-hide');
+                navScroll.classList.remove('nav-links-show');
             }
         }
 
+        // Mobile Device Menu Code
+
+        function toggleMenu(flag) {
+            if (flag == 0) {
+                navMobile.classList.add('showMenu');
+                navMobile.classList.remove('hideMenu');
+                document.documentElement.style.overflowY = 'hidden';
+            } else {
+                navMobile.classList.add('hideMenu');
+                navMobile.classList.remove('showMenu');
+                document.documentElement.style.overflowY = '';
+            }
+        }
+
+        var portFlag = false;
+
+        function expandPortfolio() {
+            var navDrop = document.querySelectorAll(".ex");
+
+            if (portFlag == false) {
+                navDrop.forEach((item) => {
+                    item.classList.add('dropActive');
+                });
+                portFlag = true;
+            } else {
+                navDrop.forEach((item) => {
+                    item.classList.remove('dropActive');
+                });
+                portFlag = false;
+            }
+        }
     </script>
 </body>
 </html>
