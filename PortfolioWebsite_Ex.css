@@ -245,8 +245,8 @@ nav .fa {
     width: 90%;
     margin: auto;
     text-align: justify;
-    padding-top: 50px;
-    padding-bottom: 60px;
+    padding-top: 70px;
+    padding-bottom: 90px;
     h1 {
         font-size: var(--fontsize3);
         font-weight: 600;
@@ -275,7 +275,7 @@ nav .fa {
     h2 {
         float: right;
         position: relative;
-        top: 105px;
+        top: 150px;
         font-size: var(--fontsize5);
         a {
             border-bottom: 1px solid #fff;
