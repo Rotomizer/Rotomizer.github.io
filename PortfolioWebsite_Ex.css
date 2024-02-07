@@ -273,9 +273,9 @@ nav .fa {
         }
     }
     h2 {
-        float: right;
         position: relative;
-        top: 150px;
+        background: transparent;
+        padding: 10px 60px;
         font-size: var(--fontsize5);
         a {
             border-bottom: 1px solid #fff;
@@ -289,10 +289,13 @@ nav .fa {
     img {
         position: relative;
         width: 35%;
+        min-height: 80vh;
+        max-height: 80vh;
         float: right;
         margin: 20px 0px 0px 0px;
         margin-left: 20px;
         border-radius: 20px;
+        object-fit: cover;
     }
 }
 
