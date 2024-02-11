@@ -47,7 +47,7 @@
             </div>
         </nav>
         <nav>
-            <div class="nav-links-mobile" id="navMobile">
+            <div class="nav-links-mobile" id="navMobile" style="z-index: 101;">
                 <i class="fa fa-times" onclick="toggleMenu(1)"></i>
                 <ul>
                     <li id="navli"><a href="index.html">Home</a></li>
@@ -59,7 +59,7 @@
                     <li id="navli"><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <i class="fa fa-bars" onclick="toggleMenu(0)"></i>
+            <i class="fa fa-bars" onclick="toggleMenu(0)" style="z-index: 100;"></i>
         </nav>
 
         <div class="header-text">
@@ -228,7 +228,7 @@
                 currentImage[num].classList.remove('hide-image');
                 currentImage[num].classList.add('show-image');
                 currentImage[num].style.zIndex = indexNum;
-                navScroll.style.zIndex = indexNum + 1;
+                navScroll.style.zIndex = indexNum;
             } else {
                 return;
             }
