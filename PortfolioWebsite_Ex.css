@@ -1529,7 +1529,7 @@ audio {
             width: 98%;
             padding: 0;
             outline: none;
-            outline-offset: 0;
+            border: none;
         }
     }
     .audio-playlist {
