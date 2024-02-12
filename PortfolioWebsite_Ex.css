@@ -31,6 +31,10 @@
 }
 
 /* Basic styling */
+.body {
+    -webkit-text-size-adjust: 100%;
+}
+
 .header {
     min-height: 100vh;
     width: 100%;
