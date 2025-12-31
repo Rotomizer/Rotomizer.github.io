@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@tailwind utilities;
+
+@theme {
+  --text-h1-size: 4rem;
+  --text-h2-size: 3.5rem;
+  --text-h3-size: 2rem;
+  --text-h4-size: 1.5rem;
+  --color-primary-bg: #fff6e3;
+  --color-secondary-bg: #c2b190;
+  --color-primary-text: #000000;
+  --color-secondary-text: #3d2900;
+  --color-accent: #413010;
+  --color-active: #ffad00;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@layer components {
+  /* shared components */
+  .debug1 {
+    @apply border border-red-500;
+  }
+
+  .list-element {
+    @apply m-auto w-full border-t-1 p-3 text-[1.3rem] first:border-t-0 last:border-b-0;
+  }
+
+  .test-card {
+    @apply relative z-0 my-10 h-100 min-w-full snap-center overflow-y-scroll rounded-2xl border-1 bg-white px-6 py-5 shadow-lg transition-all duration-500 ease-in-out lg:h-fit lg:min-w-1/2 xl:min-w-2/3 xl:min-h-90 first-of-type:lg:ml-50 last-of-type:lg:mr-50;
+  }
+
+  .test-selectors {
+    @apply h-5 w-5 cursor-pointer rounded-4xl transition-colors duration-500 ease-in-out;
+  }
+
+  .test-active {
+    @apply -translate-y-2.5 shadow-xl;
+  }
+
+  .project-card {
+    @apply flex h-64 w-full items-center justify-center rounded-lg bg-size-[110%] bg-center text-white shadow-lg [transition:background-size_0.5s_ease-in-out] hover:cursor-pointer hover:bg-size-[130%] hover:shadow-xl active:bg-size-[130%] active:shadow-xl lg:h-100;
+  }
+
+  .project-card-blur {
+    @apply flex h-full w-full items-center justify-center rounded-lg backdrop-blur-[4px] transition-opacity duration-300 hover:opacity-0 active:opacity-0;
+  }
+
+  .about-selectors {
+    @apply h-5 w-5 rounded-4xl transition-colors duration-500 ease-in-out;
+  }
+
+  .show-menu {
+    @apply translate-x-0 opacity-100 [transition:translate_0.3s_ease-in-out,opacity_0.6s_ease-out];
+  }
+
+  .hide-menu {
+    @apply -translate-x-full opacity-0 [transition:translate_0.7s_ease-in-out,opacity_0.6s_ease-out];
+  }
+
+  .mobile-nav-menu {
+    @apply hover:text-active active:text-white;
+  }
+
+  .desktop-nav-menu {
+    @apply before:border-b-active hover:text-active after:bg-active w-1/5 max-w-50 min-w-38 border-l-1 border-black px-8 py-1.5 text-center text-[1.1rem] transition-colors duration-300 before:mx-auto before:block before:w-0 before:border-b-5 before:border-t-transparent before:border-r-transparent before:border-l-transparent before:transition-all before:duration-300 after:relative after:-bottom-0.5 after:mx-auto after:block after:h-[3px] after:w-0 after:transition-all after:duration-300 hover:before:w-4/5 hover:before:border-r-[44px] hover:before:border-l-[44px] hover:after:w-4/5 active:text-secondary-text active:before:border-b-secondary-text active:after:bg-secondary-text;
+  }
+
+  /* gallery components */
+  .gallery-image-scroll {
+    @apply box-border flex h-80 w-full snap-x snap-mandatory flex-row gap-5 overflow-x-scroll overflow-y-hidden overscroll-y-auto px-8 py-7 lg:grid lg:h-fit lg:scroll-pl-6 lg:grid-flow-col lg:auto-cols-min lg:grid-rows-[repeat(2,minmax(50%,1fr))] lg:gap-3 xl:grid-cols-[repeat(6,640px)];
+  }
+
+  .gallery-card {
+    @apply aspect-[5/4] w-full snap-center rounded-lg bg-cover bg-center shadow-lg sm:aspect-video lg:w-[640px] lg:snap-start;
+  }
+
+  .gallery-video {
+    @apply w-fit h-full snap-center rounded-lg object-cover shadow-lg lg:snap-start;
+  }
+
+  /* testimonials components */
+  .testimonial-card {
+    @apply box-border relative z-0 h-full lg:basis-1/4 lg:min-w-[360px] lg:flex-initial overflow-y-scroll rounded-2xl border-1 bg-white px-6 py-5 shadow-lg transition-all duration-500 ease-in-out;
+  }
+}
